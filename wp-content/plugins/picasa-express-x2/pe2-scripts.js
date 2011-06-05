@@ -436,7 +436,8 @@ function pe2_make_html(case_selector) {
                 case 'src':return isrc;
                 case 'alt':return ialt;
                 case 'more':
-                    return ititle+iclass+istyle+idimen;
+                    return ititle+istyle;
+                    //return ititle+iclass+istyle+idimen;
             }
         });
 
