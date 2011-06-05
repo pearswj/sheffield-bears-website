@@ -27,6 +27,7 @@
 
 					<div class="entry-meta">
 						<?php twentyten_posted_on(); ?>
+						<?php twentyten_posted_in(); ?>
 					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
@@ -52,7 +53,7 @@
 <?php endif; ?>
 
 					<div class="entry-utility">
-						<?php twentyten_posted_in(); ?>
+						<!-- <?php twentyten_posted_in(); ?> -->
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-utility -->
 				</div><!-- #post-## -->
