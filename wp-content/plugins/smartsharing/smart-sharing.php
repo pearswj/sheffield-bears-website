@@ -47,7 +47,7 @@ add_action('wp_head', 'ss_css');
 function ss_css(){ 
 if (is_single()) {
 ?>
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+<!-- <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
 <script type="text/javascript">
         $(function() {
             var offset = $("#sharepost").offset();
@@ -64,7 +64,7 @@ if (is_single()) {
                 };
             });
         });
-    </script>
+    </script> -->
 
 
 <style type="text/css">
@@ -77,7 +77,12 @@ margin: 0 0px 0 <?php if (get_option('edge_distance')) { echo get_option('edge_d
 
 .sharer{
 	padding: 5px;
-	border-bottom: 1px solid #e8e8e8;
+	/* border-bottom: 1px solid #e8e8e8; */
+}
+
+.sharer2{
+	padding: 7px;
+	/* border-bottom: 1px solid #e8e8e8; */
 }
 </style>
 <?php } }
@@ -120,7 +125,7 @@ if (get_post_meta( $postid, '_mcf_retweet', true ) == "yes") { ?>
 <?php if (get_post_meta( $postid, '_mcf_facebook', true ) == "yes") { ?>
 <div class="sharer">
 <div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php echo get_permalink(); ?>" send="true" layout="box_count" width="60" show_faces="true" font=""></fb:like>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php echo get_permalink(); ?>" send="false" layout="box_count" width="60" show_faces="false" font=""></fb:like>
 </div>
 <?php } else {echo '';} ?>	
 <?php 
@@ -160,9 +165,9 @@ if (get_option('tweetmeme') == "true") { ?>
 </div>
 <?php } else {echo '';} ?>
 <?php if (get_option('fshare') == "true") { ?>
-<div class="sharer">
+<div class="sharer2">
 <div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php echo get_permalink(); ?>" send="true" layout="box_count" width="60" show_faces="true" font=""></fb:like>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php echo get_permalink(); ?>" send="false" layout="box_count" width="70" show_faces="true" font=""></fb:like>
 </div>
 <?php } else {echo '';} ?>	
 <?php 
