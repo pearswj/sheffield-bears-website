@@ -196,7 +196,7 @@ add_action('admin_menu', 'smart_sharing_settings');
 function smart_sharing_settings() {
 
 	//create new top-level menu
-	add_menu_page('Smart Sharing Settings', 'Smart Sharing', 'administrator', __FILE__, 'smartsharing_settings_page',plugins_url('/images/icon.png', __FILE__));
+	add_submenu_page('options-general.php', 'Smart Sharing Settings', 'Smart Sharing', 'administrator', __FILE__, 'smartsharing_settings_page',plugins_url('/images/icon.png', __FILE__));
 
 	//call register settings function
 	add_action( 'admin_init', 'register_smartsharingsettings' );
