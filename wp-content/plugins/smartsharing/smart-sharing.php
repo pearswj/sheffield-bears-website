@@ -71,6 +71,7 @@ if (is_single()) {
 #sharepost{
 border:<?php if (get_option('border_width')) { echo get_option('border_width'); } else {echo '1';} ?>px solid #<?php if (get_option('border_color')) { echo get_option('border_color'); } else {echo 'E8E8E8';} ?>;
 float: left; position: fixed;
+top: <?php if (get_option('top_distance')) { echo get_option('top_distance'); } else {echo '0'; } ?>px;
 background:#<?php if (get_option('bgcolor')) { echo get_option('bgcolor'); } else {echo 'fff';} ?>; 
 width: <?php if (get_option('box_width')) { echo get_option('box_width'); } else {echo '65';} ?>px; 
 margin: 0 0px 0 <?php if (get_option('edge_distance')) { echo get_option('edge_distance'); } else {echo '-150'; } ?>px;}
