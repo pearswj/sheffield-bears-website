@@ -1,0 +1,5 @@
+style tag for div:
+padding: 0 10px 10px 0;width: 75px;height: 75px;float: left
+
+style tag for img:
+padding: 0;overflow: hidden;margin: 0;width: 510px
