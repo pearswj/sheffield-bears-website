@@ -1,0 +1,26 @@
+/*
+Theme Name:     Sheffield Bears
+Description:    Sheffield Bears theme. (Child theme for the Twenty Eleven theme.)
+Author:         Will Pearson and Matt Barton
+Template:       twentyeleven
+Version:        0.1.0
+*/
+
+@import url("../twentyeleven/style.css");
+
+h1,h2 {
+	text-transform: uppercase;
+	letter-spacing: -0.08em;
+	font-family: Helvetica, Ariel, sans-serif;
+
+}
+
+.entry-title .entry-title-post {
+	color: #ffea00 !important;
+}
+
+.entry-title,
+.entry-title a,
+.entry-title a:hover {
+	color: #fff !important;
+}
