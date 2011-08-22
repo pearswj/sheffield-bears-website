@@ -24,3 +24,11 @@ h1,h2 {
 .entry-title a:hover {
 	color: #fff !important;
 }
+
+#access {
+	background: #000 !important;
+/*	position:absolute;*/
+	text-align:center;
+}
+
+#access ul{display:inline-block;}
