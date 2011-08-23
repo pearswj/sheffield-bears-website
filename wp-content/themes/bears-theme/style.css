@@ -29,9 +29,13 @@ h1,h2 {
 	background: #000 !important;
 /*	position:absolute;*/
 	text-align:center;
+	border-bottom: none !important;
 }
 
-#access ul{display:inline-block;}
+#access ul{
+	display:inline-block;
+	font-size: 14px;
+}
 
 #page {
 	background: #000 !important;
