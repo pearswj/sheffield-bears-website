@@ -11,7 +11,7 @@ global $feature_class;
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $feature_class ); ?>>
 	<header class="entry-header">
-		<h1 class="entry-date"><?php the_date('d M Y'); ?></h1>
+		<h1 class="entry-date"><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><?php the_time('d M Y'); ?></a></h1>
 		<h2 class="entry-title"><?php the_category(' '); ?>// <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 		<div class="entry-meta">

@@ -15,7 +15,7 @@
  */
 
 // Enqueue showcase script for the slider
-wp_enqueue_script( 'twentyeleven-showcase', get_template_directory_uri() . '/js/showcase.js', array( 'jquery' ), '2011-04-28' );
+wp_enqueue_script( 'twentyeleven-showcase', get_stylesheet_directory_uri() . '/js/showcase.js', array( 'jquery' ), '2011-04-28' );
 
 get_header(); ?>
 
@@ -65,8 +65,8 @@ get_header(); ?>
 					$counter_slider = 0;
 
 					?>
-
-				<section class="featured-posts">
+				<div id="column1">
+				<section class="featured-posts2">
 					<div id="showcase-heading">
 						<h1><?php _e( 'Featured Post', 'twentyeleven' ); ?></h1>
 					</div>
@@ -151,7 +151,14 @@ get_header(); ?>
 				<?php endif; // End check for published posts. ?>
 				<?php endif; // End check for sticky posts. ?>
 
-				<section class="recent-posts">
+				<section class="games">
+					<div id="showcase-heading">
+						<h1><?php _e( 'Latest Games', 'twentyeleven' ); ?></h1>
+					</div>
+				</section><!-- .games -->
+				</div><!-- column1 -->
+				<div id="column2">
+				<section class="recent-posts2">
 					<div id="showcase-heading">
 						<h1><?php _e( 'Recent Posts', 'twentyeleven' ); ?></h1>
 					</div>
@@ -168,6 +175,7 @@ get_header(); ?>
 								'terms' => array( 'post-format-aside', 'post-format-link', 'post-format-quote', 'post-format-status' ),
 								'field' => 'slug',
 								'operator' => 'NOT IN',
+								'posts_per_page' => 6,
 							),
 						),
 						'no_found_rows' => true,
@@ -193,7 +201,7 @@ get_header(); ?>
 					while ( $recent->have_posts() ) : $recent->the_post(); ?>
 
 						<li>
-							<h1 class="entry-date"><?php the_date('d M'); ?></h1>
+							<h1 class="entry-date"><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><?php the_date('d M'); ?></a></h1>
 							<h2 class="entry-title"><?php the_category(' '); ?>// <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 							<!-- <span class="comments-link">
 								<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentyeleven' ) . '</span>', __( '<b>1</b> Reply', 'twentyeleven' ), __( '<b>%</b> Replies', 'twentyeleven' ) ); ?>
@@ -209,6 +217,44 @@ get_header(); ?>
 					?>
 				</section><!-- .recent-posts -->
 
+				<section class="bears-twitter">
+					<div id="showcase-heading">
+						<h1><?php _e( 'Bears On Twitter', 'twentyeleven' ); ?></h1>
+					</div>
+						<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+						<script>
+							new TWTR.Widget({
+							  version: 2,
+							  type: 'profile',
+							   rpp: 3,
+							   interval: 6000,
+							   width: 200,
+							   height: 300,
+							   theme: {
+							     shell: {
+							       background: '#111',
+							       color: '#fff'
+							     },
+							     tweets: {
+							       background: '#000',
+							       color: '#ddd',
+							       links: '#ffea00'
+							     }
+							   },
+							   features: {
+							     scrollbar: false,
+							     loop: false,
+							     live: false,
+							     hashtags: true,
+							     timestamp: true,
+							     avatars: false,
+							     behavior: 'all'
+							   }
+							 }).render().setUser('SheffieldBears').start();
+						</script>
+					<div id="blanker"></div>
+				</section><!-- .bears-twitter -->
+				</div>
 				<!-- <div class="widget-area" role="complementary">
 					<?php if ( ! dynamic_sidebar( 'sidebar-2' ) ) : ?>
 
