@@ -59,6 +59,14 @@ The following variables are usable:
 <?php endforeach; ?>
 </table>
 
+<?php else : ?>
+
+<table class="leaguemanager mathtable">
+<tr>
+<td class="match">no recent games</td>
+</tr>
+</table>
+
 <?php endif; ?>
 
 <?php endif; ?>

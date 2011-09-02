@@ -68,7 +68,7 @@ get_header(); ?>
 				<div id="column1">
 				<section class="featured-posts2">
 					<div id="showcase-heading">
-						<h1><?php _e( 'Featured Post', 'twentyeleven' ); ?></h1>
+						<h1><?php _e( 'Featured News', 'twentyeleven' ); ?></h1>
 					</div>
 
 				<?php
@@ -155,14 +155,21 @@ get_header(); ?>
 					<div id="showcase-heading">
 						<h1><?php _e( 'Latest Games', 'twentyeleven' ); ?></h1>
 					</div>
-					<?php echo do_shortcode('[matches league_id=1 mode=home time=prev template=prev]'); ?>
-					<?php echo do_shortcode('[matches league_id=1 mode=home time=next template=next]'); ?>
+					<h2 class="league-title">BUIHA Division 1//</h2>
+					<?php echo do_shortcode('[matches league_id=1 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
+					<?php echo do_shortcode('[matches league_id=1 mode=home time=next template=next order="date LIMIT 2"]'); ?>
+					<h2 class="league-title">BUIHA Division 2//</h2>
+					<?php echo do_shortcode('[matches league_id=2 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
+					<?php echo do_shortcode('[matches league_id=2 mode=home time=next template=next order="date LIMIT 2"]'); ?>
+					<h2 class="league-title">BUIHA Division 3//</h2>
+					<?php echo do_shortcode('[matches league_id=3 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
+					<?php echo do_shortcode('[matches league_id=3 mode=home time=next template=next order="date LIMIT 2"]'); ?>
 				</section><!-- .games -->
 				</div><!-- column1 -->
 				<div id="column2">
 				<section class="recent-posts2">
 					<div id="showcase-heading">
-						<h1><?php _e( 'Recent Posts', 'twentyeleven' ); ?></h1>
+						<h1><?php _e( 'Recent News', 'twentyeleven' ); ?></h1>
 					</div>
 
 					<?php
@@ -170,7 +177,8 @@ get_header(); ?>
 					// Display our recent posts, showing full content for the very latest, ignoring Aside posts.
 					$recent_args = array(
 						'order' => 'DESC',
-						'post__not_in' => get_option( 'sticky_posts' ),
+						//'post__not_in' => get_option( 'sticky_posts' ),
+						'ignore_sticky_posts' => 1,
 						'tax_query' => array(
 							array(
 								'taxonomy' => 'post_format',
@@ -228,9 +236,9 @@ get_header(); ?>
 							new TWTR.Widget({
 							  version: 2,
 							  type: 'profile',
-							   rpp: 3,
+							   rpp: 5,
 							   interval: 6000,
-							   width: 200,
+							   width: 250,
 							   height: 300,
 							   theme: {
 							     shell: {
@@ -256,7 +264,7 @@ get_header(); ?>
 						</script>
 					<div id="blanker"></div>
 				</section><!-- .bears-twitter -->
-				</div>
+				</div><!-- column2 -->
 				<!-- <div class="widget-area" role="complementary">
 					<?php if ( ! dynamic_sidebar( 'sidebar-2' ) ) : ?>
 

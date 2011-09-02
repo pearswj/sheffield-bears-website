@@ -55,20 +55,21 @@ h1,h2 {
 ---------------------------------------------------- */
 #page {
 	margin: 0 auto;
-	max-width: 830px;
+	width: 751px;
 	background: #000 !important;
 }
 #content {
-	position: relative;
+	margin: 0 !important;
 }
 #column1 {
 	position: relative;
 	float: left;
 	/*background: #555;*/
-	width: 481px;
+	width: 471px;
+	margin-right: 10px;
 }
 #column2 {
-	width: 220px;
+	width: 250px;
 	float: left;
 }
 /* SHOWCASE (HEADINGS AND DATES)
@@ -116,8 +117,8 @@ h1,h2 {
 	width: 451px;
 	background: #111;
 	padding: 65px 10px 30px;
-	margin: 0 10px 20px 0;
-	height: 420px
+	margin: 0 0 20px 0;
+	height: 410px
 }
 .featured-posts2 h2.entry-title {
 	/*color: #fff;*/
@@ -175,8 +176,8 @@ article.feature-image.small .entry-title {
 }
 article.feature-text .entry-summary,
 article.feature-image.small .entry-summary {
-	line-height: 1.625;
-	margin-top: -15px;
+	line-height: 1.4;
+	margin: -15px 0 0 55px;
 	font-size: 10pt;
 }
 article.feature-text .entry-summary p a,
@@ -282,9 +283,9 @@ article.feature-image.small .entry-summary p a:hover {
 	position: relative;
 	background: #111;
 	float: left;
-	width: 200px;
+	width: 100%;
 	padding: 70px 10px 20px;
-	margin: 0 10px 20px 0;
+	margin: 0 0 20px 0;
 	line-height: 9pt;
 }
 .recent-posts2 ol {
@@ -312,8 +313,8 @@ article.feature-image.small .entry-summary p a:hover {
 	/*font-family: Helvetica, Arial, sans-serif;*/
 	/*color: #000 !important;*/
 	position: absolute;
-	left: -35px;
-	float: none;
+	/*left: -35px;*/
+	float: left;
 	/*top: 335px;*/
 	/*float: right;*/
 	/*position: relative;
@@ -340,6 +341,7 @@ article.feature-image.small .entry-summary p a:hover {
 .recent-posts2 li:hover .entry-date{
 	background: #ffea00;
 	opacity: .8;
+	position: relative;
 }
 /*.recent-posts2 .entry-date a {
 	opacity: 0;
@@ -357,7 +359,6 @@ article.feature-image.small .entry-summary p a:hover {
 	width: 451px;
 	background: #111;
 	padding: 70px 10px 30px;
-	margin: 0 10px 0 0;
 }
 
 /* leaguemanager */
@@ -370,8 +371,22 @@ article.feature-image.small .entry-summary p a:hover {
 	text-transform: uppercase;
 	line-height: 80%;
 }
-table.leaguemanager td {
+.leaguemanager .match.next {
+	color: #fff;
+	/*font-weight: bold;*/
+	font-size: 8pt;
+}
+.games table.leaguemanager td {
 	border: none !important;
+}
+h2.league-title {
+	color: #fff;
+	font-size: 12pt;
+	/*line-height: 80%;*/
+	margin-bottom: -5px;
+}
+.games table.leaguemanager {
+	margin: 0 0 10px;
 }
 
 /* TWITTER
@@ -380,24 +395,21 @@ table.leaguemanager td {
 	position: relative;
 	background: #111;
 	float: left;
-	width: 200px;
-	padding: 0px 10px 20px;
+	width: 100%;
+	padding: 15px 10px 20px;
 }
 /* styling */
-#tweets .twtr-hd h3,
-#tweets .twtr-hd h4 {
-	font-size: 5pt !important;
-	color: #111 !important;
+.twtr-widget {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
-.twtr-user {
-	visibility: hidden !important;
+.twtr-widget h3,
+.twtr-widget h4 {
+	visibility: hidden;
 }
-/* blanker */
-#blanker {
+.twtr-widget-profile img.twtr-profile-img {
+	visibility: hidden;
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 220px;
-	height: 70px;
-	background: #111;
+}
+.twtr-tweet {
+	border: none !important;
 }
