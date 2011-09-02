@@ -311,9 +311,9 @@ article.feature-image.small .entry-summary p a:hover {
 .recent-posts2 .entry-date {
 	/*font-family: Helvetica, Arial, sans-serif;*/
 	/*color: #000 !important;*/
-	/*position: absolute;
-	left: 0;
-	float: none;*/
+	position: absolute;
+	left: -35px;
+	float: none;
 	/*top: 335px;*/
 	/*float: right;*/
 	/*position: relative;
@@ -331,9 +331,15 @@ article.feature-image.small .entry-summary p a:hover {
 	/*letter-spacing: -0.12em;*/
 	/*z-index: 1;*/
 	/*background: none;*/
-	opacity: .8;
+	opacity: 0;
 	font-size: 12pt;
 	line-height: 9pt;
+	height: 25px;
+	/*background: #444;*/
+}
+.recent-posts2 li:hover .entry-date{
+	background: #ffea00;
+	opacity: .8;
 }
 /*.recent-posts2 .entry-date a {
 	opacity: 0;
@@ -352,6 +358,20 @@ article.feature-image.small .entry-summary p a:hover {
 	background: #111;
 	padding: 70px 10px 30px;
 	margin: 0 10px 0 0;
+}
+
+/* leaguemanager */
+.leaguemanager .match {
+	letter-spacing: -0.08em;
+}
+.leaguemanager .match,
+.leaguemanager .score {
+	font-family: Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	line-height: 80%;
+}
+table.leaguemanager td {
+	border: none !important;
 }
 
 /* TWITTER
@@ -376,7 +396,8 @@ article.feature-image.small .entry-summary p a:hover {
 #blanker {
 	position: absolute;
 	top: 0;
-	width: 200px;
+	left: 0;
+	width: 220px;
 	height: 70px;
 	background: #111;
 }
