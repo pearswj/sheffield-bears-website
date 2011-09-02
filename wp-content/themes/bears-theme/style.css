@@ -141,7 +141,7 @@ section.featured-post .attachment-small-feature {
 	/*height: auto;*/
 	/*margin: 0 -8.9% 1.625em 0;*/
 	margin: 0 0 5px;
-	max-width: 100%;
+	max-width: 451px;
 	/*position: relative;*/
 	right: 0;
 	/*top: 0;*/
@@ -374,7 +374,7 @@ article.feature-image.small .entry-summary p a:hover {
 .leaguemanager .match.next {
 	color: #fff;
 	/*font-weight: bold;*/
-	font-size: 8pt;
+	font-size: 8pt !important;
 }
 .games table.leaguemanager td {
 	border: none !important;
@@ -412,4 +412,18 @@ h2.league-title {
 }
 .twtr-tweet {
 	border: none !important;
+}
+
+/* RESPONSIVE STYLES
+---------------------------------------------------- */
+@media (max-width: 800px) {
+	.page-template-showcase-php .other-recent-posts {
+		border-bottom: none !important;
+	}
+}
+@media (max-width: 650px) {
+	.games table.leaguemanager td {
+		font-size: 13px;
+		line-height: 85%;
+	}
 }
