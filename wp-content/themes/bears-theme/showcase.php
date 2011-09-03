@@ -153,13 +153,13 @@ get_header(); ?>
 					<div id="showcase-heading">
 						<h1><?php _e( 'Latest Games', 'twentyeleven' ); ?></h1>
 					</div>
-					<h2 class="league-title">BUIHA Division 1//</h2>
+					<!-- div1 -->
 					<?php echo do_shortcode('[matches league_id=1 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
 					<?php echo do_shortcode('[matches league_id=1 mode=home time=next template=next order="date LIMIT 2"]'); ?>
-					<h2 class="league-title">BUIHA Division 2//</h2>
+					<!-- div2 -->
 					<?php echo do_shortcode('[matches league_id=2 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
 					<?php echo do_shortcode('[matches league_id=2 mode=home time=next template=next order="date LIMIT 2"]'); ?>
-					<h2 class="league-title">BUIHA Division 3//</h2>
+					<!-- div3 -->
 					<?php echo do_shortcode('[matches league_id=3 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
 					<?php echo do_shortcode('[matches league_id=3 mode=home time=next template=next order="date LIMIT 2"]'); ?>
 				</section><!-- .games -->

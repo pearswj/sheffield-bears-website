@@ -42,6 +42,7 @@ The following variables are usable:
 <br style='clear: both;' />
 <?php endif; ?>
 
+<h2 class="league-title"><?php echo $league->title ?>//</h2>
 <?php if ( $matches ) : ?>
 
 <table class='leaguemanager matchtable' summary='' title='<?php echo __( 'Match Plan', 'leaguemanager' )." ".$league->title ?>'>
