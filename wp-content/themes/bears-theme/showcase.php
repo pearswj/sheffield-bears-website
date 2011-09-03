@@ -33,6 +33,7 @@ get_header(); ?>
 						get_template_part( 'content', 'intro' );
 				?>
 
+				<div id="column1">
 				<?php
 					/**
 					 * Begin the featured posts section.
@@ -65,7 +66,6 @@ get_header(); ?>
 					$counter_slider = 0;
 
 					?>
-				<div id="column1">
 				<section class="featured-posts2">
 					<div id="showcase-heading">
 						<h1><?php _e( 'Featured News', 'twentyeleven' ); ?></h1>
@@ -74,30 +74,23 @@ get_header(); ?>
 				<?php
 					// Let's roll.
 					while ( $featured->have_posts() ) : $featured->the_post();
-
+					// Render only if post has featured image
+					if ( has_post_thumbnail() ) {
 					// Increase the counter.
 					$counter_slider++;
 
-					/**
-					 * We're going to add a class to our featured post for featured images
-					 * by default it'll have the feature-text class.
-					 */
-					$feature_class = 'feature-text';
-
-					if ( has_post_thumbnail() ) {
-						// ... but if it has a featured image let's add some class
+					// Let's add some class for the featured image...
 						$feature_class = 'feature-image small';
 
-						// Hang on. Let's check this here image out.
+						/*// Hang on. Let's check this here image out.
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) );
 
 						// Is it bigger than or equal to our header?
 						if ( $image[1] >= HEADER_IMAGE_WIDTH ) {
 							// If bigger, let's add a BIGGER class. It's EXTRA classy now.
 							$feature_class = 'feature-image large';
-						}
-					}
-					?>
+						}*/
+				?>
 
 					<section class="featured-post <?php echo $feature_class; ?>" id="featured-post-<?php echo $counter_slider; ?>">
 
@@ -106,23 +99,25 @@ get_header(); ?>
 							 * If the thumbnail is as big as the header image
 							 * make it a large featured post, otherwise render it small
 							 */
-							if ( has_post_thumbnail() ) {
+							/*if ( has_post_thumbnail() ) {
 								if ( $image[1] >= HEADER_IMAGE_WIDTH )
 									$thumbnail_size = 'large-feature';
-								else
+								else*/
 									$thumbnail_size = 'small-feature';
 								?>
 								<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( $thumbnail_size ); ?></a>
 								<?php
-							}
+							//}
 						?>
 						<?php get_template_part( 'content', 'featured' ); ?>
 					</section>
-				<?php endwhile;	?>
+				<?php }
+					endwhile; ?>
 
 				<?php
 					// Show slider only if we have more than one featured post.
-					if ( $featured->post_count > 1 ) :
+					//if ( $featured->post_count > 1 ) :
+					if ( $counter_slider > 1 ) :
 				?>
 				<nav class="feature-slider">
 					<ul>
@@ -136,6 +131,8 @@ get_header(); ?>
 
 						// Let's roll again.
 				    	while ( $featured->have_posts() ) : $featured->the_post();
+					// Again, only render slider for posts with a featured image...
+					if ( has_post_thumbnail() ) {
 				    		$counter_slider++;
 							if ( 1 == $counter_slider )
 								$class = 'class="active"';
@@ -143,7 +140,8 @@ get_header(); ?>
 								$class = '';
 				    	?>
 						<li><a href="#featured-post-<?php echo $counter_slider; ?>" title="<?php printf( esc_attr__( 'Featured: %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" <?php echo $class; ?>></a></li>
-					<?php endwhile;	?>
+					<?php }
+						endwhile; ?>
 					</ul>
 				</nav>
 				<?php endif; // End check for more than one sticky post. ?>

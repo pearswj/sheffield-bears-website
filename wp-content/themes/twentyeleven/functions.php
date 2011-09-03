@@ -318,7 +318,7 @@ endif; // twentyeleven_admin_header_image
 function twentyeleven_excerpt_length( $length ) {
 	return 40;
 }
-//add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
+add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
 
 /**
  * Returns a "Continue Reading" link for excerpts
