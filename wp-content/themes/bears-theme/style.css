@@ -72,6 +72,11 @@ h1,h2 {
 	width: 250px;
 	float: left;
 }
+
+/* ---------------------------------------------------- */
+/*			 HOMEPAGE			*/
+/* ---------------------------------------------------- */
+
 /* SHOWCASE (HEADINGS AND DATES)
 ---------------------------------------------------- */
 #showcase-heading {
@@ -414,11 +419,54 @@ h2.league-title {
 	border: none !important;
 }
 
-/* RESPONSIVE STYLES
+/* ---------------------------------------------------- */
+/*			   NEWS				*/
+/* ---------------------------------------------------- */
+
+.hentry,
+.no-results {
+	background: #111;
+	/*border-bottom: 20px solid #000 !important;*/
+	border: none !important;
+	padding: 0 10px 1.625em;
+	/*margin: ;*/
+}
+.featured-posts2 .hentry {  /* reset on homepage */
+	background: none;
+	padding: 0;
+}
+.hentry .entry-header {
+	padding-top: 0;
+}
+
+/* FEATURED POSTS
 ---------------------------------------------------- */
+.sticky .entry-content {
+	padding-top: 10px;
+}
+.sticky img.attachment-large {
+	width: 100%;
+	height: auto;
+	margin: 10px 0 0;
+}
+.sticky a:hover img.attachment-large {
+	opacity: 0.8;
+}
+.sticky .entry-format,
+.sticky .entry-header {
+	padding-top: 10px !important;
+}
+
+/* ---------------------------------------------------- */
+/*		    RESPONSIVE STYLES			*/
+/* ---------------------------------------------------- */
+
 @media (max-width: 800px) {
 	.page-template-showcase-php .other-recent-posts {
 		border-bottom: none !important;
+	}
+	#page {
+		width: 100%;
 	}
 }
 @media (max-width: 650px) {
