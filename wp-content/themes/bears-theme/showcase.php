@@ -103,7 +103,8 @@ get_header(); ?>
 								if ( $image[1] >= HEADER_IMAGE_WIDTH )
 									$thumbnail_size = 'large-feature';
 								else*/
-									$thumbnail_size = 'small-feature';
+									//$thumbnail_size = 'small-feature';
+									$thumbnail_size = 'custom-feature';
 								?>
 								<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( $thumbnail_size ); ?></a>
 								<?php

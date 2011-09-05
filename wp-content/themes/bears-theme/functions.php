@@ -18,3 +18,17 @@ function twentyeleven_posted_on() {
 	);
 }
 endif;
+add_action( 'after_setup_theme', 'my_child_theme_setup' );
+	function my_child_theme_setup() {
+		// We are providing our own filter for excerpt_length...
+		remove_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
+		function custom_excerpt_length( $length ) {
+			return 33;
+		}
+		add_filter( 'excerpt_length', 'custom_excerpt_length' );
+
+		// image sizes:
+		set_post_thumbnail_size( 451, 300, true );
+		add_image_size( 'custom-feature', 451, 300, true );
+	}
+

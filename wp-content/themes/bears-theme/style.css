@@ -18,7 +18,7 @@ h1,h2 {
 	font-weight: bold;
 }
 .entry-title {
-	line-height: 80% !important;
+	line-height: 85% !important;
 	/*text-transform: uppercase;*/
 	color: #fff !important;
 	letter-spacing: -0.08em;
@@ -34,7 +34,7 @@ h1,h2 {
 
 /* Center nav bar */
 #access {
-	background: #000 !important;
+	background: #111 !important;
 	text-align:center;
 	border-bottom: none !important;
 	/*margin-bottom: -20px;*/
@@ -121,7 +121,7 @@ h1,h2 {
 	float: left;
 	width: 451px;
 	background: #111;
-	padding: 65px 10px 30px;
+	padding: 65px 8px 30px 11px;
 	margin: 0 0 20px 0;
 	height: 410px
 }
@@ -140,15 +140,15 @@ h1,h2 {
 .featured-post .feature-image.small:after {
 	background: none !important;
 }
-section.featured-post .attachment-small-feature {
-	display: inline;
-	float: left;
+section.featured-post .attachment-custom-feature {
+	/*display: inline;*/
+	/*float: left;*/
 	/*height: auto;*/
 	/*margin: 0 -8.9% 1.625em 0;*/
 	margin: 0 0 5px;
 	max-width: 451px;
 	/*position: relative;*/
-	right: 0;
+	/*right: 0;*/
 	/*top: 0;*/
 	/*background: #222 !important;*/
 }
@@ -164,7 +164,7 @@ article.feature-image.small {
 	line-height: 12pt;
 	padding-bottom: 0;
 }
-.featured-post .feature-text {
+.featured-post .feature-text { /* just in-case... */
 	padding-top: 20px;
 }
 article.feature-text .entry-title,
@@ -291,7 +291,7 @@ article.feature-image.small .entry-summary p a:hover {
 	width: 100%;
 	padding: 70px 10px 20px;
 	margin: 0 0 20px 0;
-	line-height: 9pt;
+	line-height: 10pt;
 }
 .recent-posts2 ol {
 	list-style: none;
@@ -372,9 +372,9 @@ article.feature-image.small .entry-summary p a:hover {
 }
 .leaguemanager .match,
 .leaguemanager .score {
-	font-family: Helvetica, Arial, sans-serif;
+	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 	text-transform: uppercase;
-	line-height: 80%;
+	line-height: 90%;
 }
 .leaguemanager .match.next {
 	color: #fff;
