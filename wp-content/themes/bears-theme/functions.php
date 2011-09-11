@@ -1,4 +1,8 @@
 <?php
+
+/* override date format for posts */
+/* (due to leaguemanager using date format set in dashboard) */
+
 if ( ! function_exists( 'twentyeleven_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -18,6 +22,7 @@ function twentyeleven_posted_on() {
 	);
 }
 endif;
+
 add_action( 'after_setup_theme', 'my_child_theme_setup' );
 	function my_child_theme_setup() {
 		// We are providing our own filter for excerpt_length...
@@ -27,8 +32,14 @@ add_action( 'after_setup_theme', 'my_child_theme_setup' );
 		}
 		add_filter( 'excerpt_length', 'custom_excerpt_length' );
 
-		// image sizes:
+		// image sizes: (maybe these should go outside of this function?)
 		set_post_thumbnail_size( 451, 300, true );
 		add_image_size( 'custom-feature', 451, 300, true );
 	}
 
+/* header image size */
+
+//define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyeleven_header_image_width', 752 ) );
+//define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyeleven_header_image_height', 145 ) );
+
+?>
