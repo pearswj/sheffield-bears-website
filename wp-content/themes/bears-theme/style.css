@@ -34,9 +34,10 @@ h1,h2 {
 
 /* Center nav bar */
 #access {
-	background: #111 !important;
+	background: #222 !important;
 	text-align:center;
 	border-bottom: none !important;
+	border-top: 2px solid #ffea00;
 	/*margin-bottom: -20px;*/
 	margin-bottom: 0 !important;
 }
@@ -120,7 +121,7 @@ h1,h2 {
 	position: relative;
 	float: left;
 	width: 451px;
-	background: #111;
+	background: #222;
 	padding: 65px 8px 30px 11px;
 	margin: 0 0 20px 0;
 	height: 410px
@@ -286,7 +287,7 @@ article.feature-image.small .entry-summary p a:hover {
 ---------------------------------------------------- */
 .recent-posts2 {
 	position: relative;
-	background: #111;
+	background: #222;
 	float: left;
 	width: 100%;
 	padding: 70px 10px 20px;
