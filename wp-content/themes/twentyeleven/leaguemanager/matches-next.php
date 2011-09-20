@@ -42,18 +42,19 @@ The following variables are usable:
 <br style='clear: both;' />
 <?php endif; ?>
 
+<h2 class="league-title">UPCOMING//</h2>
 <?php if ( $matches ) : ?>
 
 <table class='leaguemanager matchtable' summary='' title='<?php echo __( 'Match Plan', 'leaguemanager' )." ".$league->title ?>'>
-<tr>
+<!--tr>
 	<td class="match next">Upcoming...</td>
-<!--	<th class='match'><?php _e( 'Match', 'leaguemanager' ) ?></th>
-	<th class='score'><?php _e( 'Score', 'leaguemanager' ) ?></th> -->
-</tr>
+	<th class='match'><?php _e( 'Match', 'leaguemanager' ) ?></th>
+	<th class='score'><?php _e( 'Score', 'leaguemanager' ) ?></th>
+</tr-->
 <?php foreach ( $matches AS $match ) : ?>
 
 <tr class='<?php echo $match->class ?>'>
-	<td class='match'><?php echo $match->date." – ".$match->start_time." – ".$match->location ?><br /><!--<a href="<?php echo $match->pageURL ?>">--><?php echo $match->title ?><!--</a>--> <?php echo $match->report ?></td>
+	<td class='match'><?php echo $match->group." – ".$match->date." – ".$match->start_time." – ".$match->location ?><br /><span class="match2"><!--<a href="<?php echo $match->pageURL ?>">--><?php echo $match->title ?><!--</a>--></span> <!--?php echo $match->report ?--></td>
 	<!-- <td class='score' valign='bottom'><?php echo $match->score ?></td> -->
 </tr>
 

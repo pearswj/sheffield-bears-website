@@ -42,7 +42,8 @@ The following variables are usable:
 <br style='clear: both;' />
 <?php endif; ?>
 
-<h2 class="league-title"><?php echo $league->title ?>//</h2>
+<!--h2 class="league-title"><?php echo $league->title ?>//</h2-->
+<h2 class="league-title">RECENT//</h2>
 <?php if ( $matches ) : ?>
 
 <table class='leaguemanager matchtable' summary='' title='<?php echo __( 'Match Plan', 'leaguemanager' )." ".$league->title ?>'>
@@ -53,7 +54,7 @@ The following variables are usable:
 <?php foreach ( $matches AS $match ) : ?>
 
 <tr class='<?php echo $match->class ?>'>
-	<td class='match'><?php echo $match->date ?><br /><!--<a href="<?php echo $match->pageURL ?>">--><?php echo $match->title ?><!--</a>--> <?php echo $match->report ?></td>
+	<td class='match'><?php echo $match->group." – ".$match->date ?><br /><span class="match2"><!--<a href="<?php echo $match->pageURL ?>">--><?php echo $match->title ?><!--</a>--></span> <?php echo $match->report ?></td>
 	<td class='score' valign='bottom'><?php echo $match->score ?></td>
 </tr>
 

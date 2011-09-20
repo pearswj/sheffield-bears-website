@@ -154,15 +154,9 @@ get_header(); ?>
 					<div id="showcase-heading">
 						<h1><?php _e( 'Latest Games', 'twentyeleven' ); ?></h1>
 					</div>
-					<!-- div1 -->
-					<?php echo do_shortcode('[matches league_id=1 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
-					<?php echo do_shortcode('[matches league_id=1 mode=home time=next template=next order="date LIMIT 2"]'); ?>
-					<!-- div2 -->
-					<?php echo do_shortcode('[matches league_id=2 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
-					<?php echo do_shortcode('[matches league_id=2 mode=home time=next template=next order="date LIMIT 2"]'); ?>
-					<!-- div3 -->
-					<?php echo do_shortcode('[matches league_id=3 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
-					<?php echo do_shortcode('[matches league_id=3 mode=home time=next template=next order="date LIMIT 2"]'); ?>
+					<!-- BUIHA -->
+					<?php echo do_shortcode('[matches league_id=5 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
+					<?php echo do_shortcode('[matches league_id=5 mode=home time=next template=next order="date LIMIT 2"]'); ?>
 				</section><!-- .games -->
 				</div><!-- column1 -->
 				<div id="column2">
