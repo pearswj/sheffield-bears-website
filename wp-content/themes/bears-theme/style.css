@@ -167,17 +167,9 @@ article.feature-image.small {
 .featured-post .feature-text { /* just in-case... */
 	padding-top: 20px;
 }
-article.feature-text .entry-title,
-article.feature-image.small .entry-title {
-	/*line-height: 12pt !important;*/
-	/*float: left;*/
-	/*display: inline;*/
-	/*margin: 0;*/
-	/*background: #333;*/
-/*	padding: 0;
-	width: 100% !important;*/
-	/*position: relative;*/
-/*	font-size: 20px;*/
+article.feature-text h2.entry-title,
+article.feature-image.small h2.entry-title {
+	padding: 0;
 }
 article.feature-text .entry-summary,
 article.feature-image.small .entry-summary {
