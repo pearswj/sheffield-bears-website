@@ -155,8 +155,8 @@ get_header(); ?>
 						<h1><?php _e( 'Latest Games', 'twentyeleven' ); ?></h1>
 					</div>
 					<!-- BUIHA -->
-					<?php echo do_shortcode('[matches league_id=5 mode=home time=prev template=prev order="date DESC LIMIT 2"]'); ?>
-					<?php echo do_shortcode('[matches league_id=5 mode=home time=next template=next order="date LIMIT 2"]'); ?>
+					<?php echo do_shortcode('[matches league_id=5 mode=home time=prev template=prev order="date DESC LIMIT 3"]'); ?>
+					<?php echo do_shortcode('[matches league_id=5 mode=home time=next template=next order="date LIMIT 5"]'); ?>
 				</section><!-- .games -->
 				</div><!-- column1 -->
 				<div id="column2">
@@ -205,7 +205,7 @@ get_header(); ?>
 
 						<li>
 						<!--	<h1 class="entry-date"><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><?php the_time('d M'); ?></a></h1> -->
-							<h2 class="entry-date"><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><?php the_date(); ?></a></h2>
+							<!--h2 class="entry-date"><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><?php the_date(); ?></a></h2-->
 							<h2 class="entry-title"><?php the_category(' '); ?>// <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 							<!-- <span class="comments-link">
 								<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentyeleven' ) . '</span>', __( '<b>1</b> Reply', 'twentyeleven' ), __( '<b>%</b> Replies', 'twentyeleven' ) ); ?>

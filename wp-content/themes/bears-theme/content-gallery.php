@@ -12,10 +12,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<hgroup>
-			<h2 class="entry-title"><?php the_category(' '); ?>// <a class="entry-title-post" href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<?php if ( is_sticky() ) : ?>
+				<hgroup>
+					<h2 class="entry-title"><?php the_category(' '); ?>// <a class="entry-title-post" href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+					<h3 class="entry-format"><?php _e( 'Featured', 'twentyeleven' ); ?></h3>
+				</hgroup>
+			<?php else : ?>
+				<hgroup>
+					<h2 class="entry-title"><?php the_category(' '); ?>// <a class="entry-title-post" href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<!-- <h3 class="entry-format"><?php _e( 'Gallery', 'twentyeleven' ); ?></h3> -->
-		</hgroup>
+				</hgroup>
+			<?php endif; ?>
 
 		<div class="entry-meta">
 			<?php twentyeleven_posted_on(); ?>
