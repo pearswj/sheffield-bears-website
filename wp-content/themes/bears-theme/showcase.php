@@ -66,7 +66,7 @@ get_header(); ?>
 					$counter_slider = 0;
 
 					?>
-				<section class="featured-posts2">
+				<section class="featured-posts2 home-section">
 					<div id="showcase-heading">
 						<h1><?php _e( 'Featured News', 'twentyeleven' ); ?></h1>
 					</div>
@@ -150,7 +150,7 @@ get_header(); ?>
 				<?php endif; // End check for published posts. ?>
 				<?php endif; // End check for sticky posts. ?>
 
-				<section class="games">
+				<section class="games home-section">
 					<div id="showcase-heading">
 						<h1><?php _e( 'Latest Games', 'twentyeleven' ); ?></h1>
 					</div>
@@ -166,7 +166,7 @@ get_header(); ?>
 				</section><!-- .games -->
 				</div><!-- column1 -->
 				<div id="column2">
-				<section class="recent-posts2">
+				<section class="recent-posts2 home-section">
 					<div id="showcase-heading">
 						<h1><?php _e( 'Recent News', 'twentyeleven' ); ?></h1>
 					</div>
@@ -227,7 +227,7 @@ get_header(); ?>
 					?>
 				</section><!-- .recent-posts -->
 
-				<section class="bears-twitter">
+				<section class="bears-twitter home-section">
 					<div id="showcase-heading">
 						<h1><?php _e( 'Bears On Twitter', 'twentyeleven' ); ?></h1>
 					</div>
@@ -242,11 +242,11 @@ get_header(); ?>
 							   height: 300,
 							   theme: {
 							     shell: {
-							       background: '#111',
+							       background: 'none',
 							       color: '#fff'
 							     },
 							     tweets: {
-							       background: '#111',
+							       background: 'none',
 							       color: '#ddd',
 							       links: '#ffea00'
 							     }
