@@ -153,6 +153,7 @@ h1,h2 {
 	/*margin: 0;
 	padding: 0;*/
 	width: 441px;
+	/*width: 100% !important;*/
 	font-size: 26px;
 	/*background: #555;*/
 	/*padding: 0;*/
@@ -453,6 +454,7 @@ h2.league-title {
 }
 .twtr-tweet {
 	/*border-bottom:1px dotted #ddd;*/
+	/*border: none !important;*/
 }
 .twtr-widget em {
 	text-transform: uppercase;
