@@ -397,9 +397,13 @@ article.feature-image.small .entry-summary p a:hover {
 	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 	text-transform: uppercase;
 	line-height: 90%;
+	font-size: 14px;
 }
 .leaguemanager .match2 {
 	color: #fff;
+}
+.leaguemanager a:hover {
+	text-decoration: underline;
 }
 /*.leaguemanager .match.next {
 	color: #fff;
@@ -417,7 +421,7 @@ article.feature-image.small .entry-summary p a:hover {
 }
 h2.league-title {
 	color: #fff;
-	font-size: 12pt;
+	font-size: 16px;
 	/*line-height: 80%;*/
 	margin-bottom: -5px;
 }
@@ -437,6 +441,7 @@ h2.league-title {
 /* styling */
 .twtr-widget {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px !important;
 }
 .twtr-widget h3,
 .twtr-widget h4 {
@@ -448,6 +453,9 @@ h2.league-title {
 }
 .twtr-tweet {
 	/*border-bottom:1px dotted #ddd;*/
+}
+.twtr-widget em {
+	text-transform: uppercase;
 }
 
 /* ---------------------------------------------------- */
