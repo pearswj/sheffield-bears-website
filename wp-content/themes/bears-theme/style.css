@@ -60,6 +60,11 @@ h1,h2 {
 	opacity: .9;
 }
 
+/* Footer */
+#colophon {
+	background: #000 !important;
+}
+
 /* STRUCTURE
 ---------------------------------------------------- */
 #page {
@@ -132,6 +137,9 @@ h1,h2 {
 	/*opacity: 0.8;*/
 	background: rgb(40, 40, 40);
 	background: rgba(40, 40, 40, 0.8);
+}
+.showcase .page {
+	background: #000 !important;
 }
 
 /* FEATURED POSTS
