@@ -39,8 +39,8 @@ h1,h2 {
 	text-align:center;
 	border-bottom: none !important;
 	/*margin-bottom: -20px;*/
-	margin: 5px 0 0 !important;
-	padding: 0 !important;
+	margin: 10px 0 0 !important;
+	padding: 0 10px 0 !important;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -48,6 +48,7 @@ h1,h2 {
 	/*background-image: none !important;*/
 	background: rgb(40, 40, 40) !important;
 	background: rgba(40, 40, 40, 0.8)!important;
+	max-width: 731px;
 }
 #access ul{
 	display:inline-block;
@@ -58,6 +59,10 @@ h1,h2 {
 #access a:focus {
 	background: #ffea00 !important;
 	opacity: .9;
+}
+#access .menu-default-container {
+	height: 46px;
+	margin: 0 25px;
 }
 
 /* Footer */
@@ -79,10 +84,12 @@ h1,h2 {
 	position: relative;
 	float: left;
 	/*background: #555;*/
-	width: 471px;
-	margin-right: 10px;
+	width: 100%;
+	max-width: 451px;
+	margin-right: 30px;
 }
 #column2 {
+	position: relative;
 	width: 250px;
 	float: left;
 }
@@ -140,6 +147,10 @@ h1,h2 {
 }
 .showcase .page {
 	background: #000 !important;
+	margin-bottom: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
 }
 
 /* FEATURED POSTS
@@ -147,11 +158,12 @@ h1,h2 {
 .featured-posts2 {
 	position: relative
 	float: left;
-	width: 451px;
+	width: 100%;
 	/*background: #111;*/
-	padding: 65px 8px 30px 11px;
+	padding: 45px 8px 25px 11px;
 	margin: 0 0 20px 0;
-	height: 277px
+	/*height: 277px*/
+	height: auto;
 }
 .featured-posts2 h2.entry-title {
 	/*color: #fff;*/
@@ -274,11 +286,18 @@ article.feature-image.small .entry-summary p a:hover {
 	-moz-transition-property: opacity, visibility;
 	-moz-transition-timing-function: ease;
 	position: absolute;
+	top: 45px;
 	width: 451px;
+
 }
 .featured-posts2 section.featured-post {
 	opacity: 0;
 	visibility: hidden;
+	margin: 0;
+	padding: 0;
+}
+.featured-posts2 #featured-dummy {
+	opacity: 0;
 }
 .featured-posts2 #featured-post-1 {
 	opacity: 1;
@@ -286,7 +305,7 @@ article.feature-image.small .entry-summary p a:hover {
 }
 #content .feature-slider {
 	top: 20px;
-	right: 10px;
+	right: -10px;
 	/*overflow: visible;*/
 	/*position: absolute;*/
 }
@@ -391,9 +410,9 @@ article.feature-image.small .entry-summary p a:hover {
 .games {
 	position: relative;
 	float: left;
-	width: 451px;
+	width: 100%;
 	/*background: #111;*/
-	padding: 70px 10px 30px;
+	padding: 70px 10px 20px;
 	margin-bottom: 20px;
 }
 
@@ -423,6 +442,9 @@ article.feature-image.small .entry-summary p a:hover {
 	border-bottom:1px dotted #ddd !important;
 	padding: 5px 5px 5px;
 	vertical-align: middle;
+}
+.games table.leaguemanager td.score {
+	text-align: right;
 }
 .games table.leaguemanager {
 	border-bottom: 1px solid #222 !important;
@@ -556,4 +578,34 @@ h2.league-title {
 		font-size: 13px;
 		line-height: 85%;
 	}
+	#access {
+		position: relative;
+		left: -10px;
+	}
+	#column2,
+	#column1 {
+		width: 100%;
+		max-width: 451px;
+		left: -10px;
+	}
+	.featured-posts2 #featured-dummy img,
+	.featured-posts2 img {
+		width: 100% !important;
+		height: auto;
+	}
+	section.featured-post {
+		width: 100% !important;
+	}
+	.featured-posts2 h2.entry-title {
+		width: 75%;
+	}
+	.games table.leaguemanager td.score {
+		width: 28px;
+	}
+	/*.featured-posts2 {
+		height: 200%;
+	}*/
+	/*.twtr-widget {
+		margin: 0 auto 0;
+	}*/
 }

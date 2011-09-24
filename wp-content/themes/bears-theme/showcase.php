@@ -90,7 +90,13 @@ get_header(); ?>
 							// If bigger, let's add a BIGGER class. It's EXTRA classy now.
 							$feature_class = 'feature-image large';
 						}*/
+						$thumbnail_size = 'custom-feature';
 				?>
+				<?php if ( $counter_slider == 1 ) : ?>
+					<div id="featured-dummy">
+						<?php the_post_thumbnail( $thumbnail_size ); ?>
+					</div>
+				<?php endif; ?>
 
 					<section class="featured-post <?php echo $feature_class; ?>" id="featured-post-<?php echo $counter_slider; ?>">
 
@@ -104,7 +110,7 @@ get_header(); ?>
 									$thumbnail_size = 'large-feature';
 								else*/
 									//$thumbnail_size = 'small-feature';
-									$thumbnail_size = 'custom-feature';
+									//$thumbnail_size = 'custom-feature';
 								?>
 								<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( $thumbnail_size ); ?></a>
 								<?php
@@ -230,9 +236,9 @@ get_header(); ?>
 							new TWTR.Widget({
 							  version: 2,
 							  type: 'profile',
-							   rpp: 5,
+							   rpp: 3,
 							   interval: 6000,
-							   width: 250,
+							   width: 'auto',
 							   height: 300,
 							   theme: {
 							     shell: {
