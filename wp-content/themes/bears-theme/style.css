@@ -54,11 +54,20 @@ h1,h2 {
 	display:inline-block;
 	font-size: 14px;
 }
-#access li:hover > a,
-#access ul ul :hover > a,
-#access a:focus {
+#access .sub-menu li > a {
+	background: rgb(40, 40, 40) !important;
+	background: rgba(40, 40, 40, 0.8) !important;
+}
+#access .sub-menu li > a {
+	color: #fff;
+}
+#access .sub-menu li > a:last-child {
+	border: none;
+}
+#access li:hover > a {
 	background: #ffea00 !important;
-	opacity: .9;
+	/*opacity: .9;*/
+	color: #373737;
 }
 #access .menu-default-container {
 	height: 46px;
