@@ -85,7 +85,7 @@ h1,h2 {
 	position: relative;
 	float: left;
 	/*background: #555;*/
-	width: 100%;
+	/*width: 100%;*/
 	max-width: 451px;
 	margin-right: 30px;
 }
@@ -588,9 +588,6 @@ h2.league-title {
 	.page-template-showcase-php .other-recent-posts {
 		border-bottom: none !important;
 	}
-	#page {
-		width: 100%;
-	}
 	.singular article.post {
 		padding-left: 10px;
 		padding-right: 10px;
@@ -601,6 +598,9 @@ h2.league-title {
 	}
 }
 @media (max-width: 650px) {
+	#page {
+		width: 100%;
+	}
 	.games table.leaguemanager td {
 		font-size: 13px;
 		line-height: 85%;
