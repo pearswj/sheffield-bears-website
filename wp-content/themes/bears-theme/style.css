@@ -15,7 +15,7 @@ h1,h2 {
 	/*letter-spacing: -0.08em;*/
 	font-size: 15pt;
 	color: black;
-	font-weight: 300;
+	font-weight: 300 !important;
 }
 .entry-title {
 	line-height: 85% !important;
