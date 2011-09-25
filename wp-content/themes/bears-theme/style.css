@@ -66,8 +66,9 @@ h1,h2 {
 }
 
 /* Footer */
-#colophon {
+#colophon #site-generator {
 	background: #000 !important;
+	padding-top: 10px;
 }
 
 /* STRUCTURE
@@ -541,25 +542,43 @@ h2.league-title {
 .singular.page .hentry {
 	padding: 20px 0 0;
 }
-.singular #primary {
+.singular article.post {
+	top: 45px;
+	padding-top: 15px;
 	/*background: #111;*/ /* #111 background on all singular pages */
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 	background: rgb(40, 40, 40);
 	background: rgba(40, 40, 40, 0.8);
+	padding-bottom: 50px;
+	margin-bottom: 75px;
 }
+/*.singular #content {
+	margin-bottom: 45px !important;
+}*/
 
 #nav-single {
-	background: #000; /* make nav on singular post pages separate from content */
+	/*background: #000;*/ /* make nav on singular post pages separate from content */
 }
-.singular .entry-meta {
+.singular .entry-header .entry-meta {
 	z-index: 2; /* reqd to make post date visible above nav */
+	/*position: relative;*/
+	top: -41px;
+}
+.singular .entry-header .entry-title {
+	position: relative;
+	top: -20px;
+	margin-bottom: -20px;
 }
 .singular .entry-title {
 	font-weight: 300;
 }
 
+/*#comments {
+	position: relative;
+	top: 30px;
+}*/
 
 /* ---------------------------------------------------- */
 /*		    RESPONSIVE STYLES			*/
@@ -572,15 +591,19 @@ h2.league-title {
 	#page {
 		width: 100%;
 	}
+	.singular article.post {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#access {
+		position: relative;
+		left: -10px;
+	}
 }
 @media (max-width: 650px) {
 	.games table.leaguemanager td {
 		font-size: 13px;
 		line-height: 85%;
-	}
-	#access {
-		position: relative;
-		left: -10px;
 	}
 	#column2,
 	#column1 {
