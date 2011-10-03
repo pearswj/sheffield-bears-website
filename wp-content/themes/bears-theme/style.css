@@ -69,10 +69,10 @@ h1,h2 {
 	/*opacity: .9;*/
 	color: #373737;
 }
-#access .menu-default-container {
+/*#access .menu-default-container {
 	height: 46px;
 	margin: 0 25px;
-}
+}*/
 
 /* Footer */
 #colophon #site-generator {
@@ -155,17 +155,18 @@ h1,h2 {
 	background: rgb(40, 40, 40);
 	background: rgba(40, 40, 40, 0.8);
 }
-.showcase .page {
+/*.showcase .page {
 	background: #000 !important;
 	margin-bottom: 0;
 	padding: 0;
 	margin: 0;
 	width: 100%;
-}
+}*/
 
 /* content */
 
 .showcase article.intro {
+	background: #000;
 	margin-bottom: 0;
 }
 .showcase article.intro p {
