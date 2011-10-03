@@ -33,7 +33,6 @@ get_header(); ?>
 						get_template_part( 'content', 'intro' );
 				?>
 
-				<div id="column1">
 				<?php
 					/**
 					 * Begin the featured posts section.
@@ -66,6 +65,18 @@ get_header(); ?>
 					$counter_slider = 0;
 
 					?>
+				<div id="announce">
+					<?php
+					while ( $featured->have_posts() ) : $featured->the_post();
+					if ( ! has_post_thumbnail() ) {
+					?>
+						<h2 class="entry-title">Announcement: <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				<?php
+					}
+					endwhile;
+					?>
+				</div>
+				<div id="column1">
 				<section class="featured-posts2 home-section">
 					<div id="showcase-heading">
 						<h1><?php _e( 'Featured News', 'twentyeleven' ); ?></h1>

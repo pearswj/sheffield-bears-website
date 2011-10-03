@@ -134,6 +134,30 @@ h1,h2 {
 	background: rgba(40, 40, 40, 0.8);
 }
 
+/* content */
+
+.showcase article.intro {
+	margin-bottom: 0;
+}
+.showcase article.intro p {
+	margin-bottom: 0;
+}
+
+/* ANNOUNCEMENTS
+---------------------------------------------------- */
+#announce {
+	margin-bottom: 20px;
+}
+#announce h2 {
+	/*visibility: visible;*/
+	/*display: block;*/
+	position: relative;
+	/*top: -40px;*/
+	text-align: center;
+	color: white;
+	padding: 5px 0;
+}
+
 /* FEATURED POSTS
 ---------------------------------------------------- */
 .featured-posts2 {
