@@ -42,4 +42,21 @@ add_action( 'after_setup_theme', 'my_child_theme_setup' );
 //define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyeleven_header_image_width', 752 ) );
 //define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyeleven_header_image_height', 145 ) );
 
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
+
+/* add widget to dashboard */
+function my_custom_dashboard_widgets() {
+global $wp_meta_boxes;
+
+wp_add_dashboard_widget('custom_help_widget', 'Using the Sheffield Bears website', 'custom_dashboard_help');
+}
+
+function custom_dashboard_help() {
+echo "<p>Welcome to the Sheffield Bears website! For details on how to use a couple of the more bespoke features of the site, see below...</p>
+      <h2>1. Featured Posts</h2>
+      <p>To have a post show up in the 'Featured Posts' section, mark it as <b>sticky</b> and add a <b>featured image</b>.</p>
+      <h2>2. Announcements</h2>
+      <p>To have a post show up in the 'Announcements' section, mark it as <b>sticky</b> only.</p>";
+}
+
 ?>
