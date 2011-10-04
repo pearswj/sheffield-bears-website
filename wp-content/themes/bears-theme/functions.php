@@ -39,8 +39,8 @@ add_action( 'after_setup_theme', 'my_child_theme_setup' );
 
 /* header image size */
 
-//define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyeleven_header_image_width', 752 ) );
-//define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyeleven_header_image_height', 145 ) );
+define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyeleven_header_image_width', 751 ) );
+define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyeleven_header_image_height', 180 ) );
 
 add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
 
