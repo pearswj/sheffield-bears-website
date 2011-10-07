@@ -595,7 +595,7 @@ img.attachment-large {
 #nav-single {
 	/*background: #000;*/ /* make nav on singular post pages separate from content */
 }
-.singular .entry-header .entry-meta {
+.singular .type-post .entry-header .entry-meta {
 	z-index: 2; /* reqd to make post date visible above nav */
 	/*position: relative;*/
 	top: -41px;
