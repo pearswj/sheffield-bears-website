@@ -95,7 +95,7 @@ h1,h2 {
 	float: left;
 	/*background: #555;*/
 	width: 100%;
-	max-width: 451px;
+	max-width: 471px;
 	margin-right: 30px;
 }
 #column2 {
@@ -167,10 +167,18 @@ h1,h2 {
 
 .showcase article.intro {
 	background: #000;
-	margin-bottom: 0;
+	/*margin-bottom: 0;*/
+	padding: 0;
+	margin: 0;
+	width: 100%;
 }
 .showcase article.intro p {
 	margin-bottom: 0;
+}
+/*.showcase .hentry.intro {
+}*/
+.page-template-showcase-php #main {
+	padding-top: 0;
 }
 
 /* ANNOUNCEMENTS
@@ -195,8 +203,8 @@ h1,h2 {
 	float: left;
 	width: 100%;
 	/*background: #111;*/
-	padding: 45px 10px 25px 10px;
-	margin: 0 0 20px 0;
+	padding: 45px 10px 25px;
+	margin: 0 0 20px;
 	/*height: 277px*/
 	height: auto;
 }
@@ -322,8 +330,8 @@ article.feature-image.small .entry-summary p a:hover {
 	-moz-transition-timing-function: ease;
 	position: absolute;
 	top: 45px;
-	width: 451px;
-
+	/*width: 451px;*/
+	width: 100%;
 }
 .featured-posts2 section.featured-post {
 	opacity: 0;
@@ -620,6 +628,16 @@ img.attachment-large {
 /* ---------------------------------------------------- */
 
 @media (max-width: 800px) {
+	/*body {
+		padding: 0;
+	}*/
+	#page {
+		width: 90%;
+		/*margin: 0;*/
+	}
+	#main {
+		margin: 0 -10px;
+	}
 	.page-template-showcase-php .other-recent-posts {
 		border-bottom: none !important;
 	}
@@ -631,29 +649,34 @@ img.attachment-large {
 		position: relative;
 		left: -10px;
 	}
-}
-@media (max-width: 650px) {
-	#page {
-		width: 100%;
-	}
-	.games table.leaguemanager td {
-		font-size: 13px;
-		line-height: 85%;
-	}
 	#column2,
 	#column1 {
 		width: 100%;
-		max-width: 451px;
-		left: -10px;
+		/*max-width: 471px;*/
+		/*left: -10px;*/
+		margin-right: 20px;
+		margin-left: -10px;
+	}
+	#column2 {
+		width: 100%;
+	}
+	.showcase #content {
+		margin: 0 10px !important;
+	}
+}
+@media (max-width: 650px) {
+	.games table.leaguemanager td {
+		font-size: 13px;
+		line-height: 85%;
 	}
 	.featured-posts2 #featured-dummy img,
 	.featured-posts2 img {
 		width: 100% !important;
 		height: auto;
 	}
-	section.featured-post {
+	/*section.featured-post {
 		width: 100% !important;
-	}
+	}*/
 	.featured-posts2 h2.entry-title {
 		width: 75%;
 	}
