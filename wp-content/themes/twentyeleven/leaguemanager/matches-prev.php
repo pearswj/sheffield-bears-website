@@ -63,7 +63,7 @@ The following variables are usable:
 
 <?php else : ?>
 
-<table class="leaguemanager mathtable">
+<table class="leaguemanager matchtable">
 <tr>
 <td class="match">no recent games</td>
 </tr>

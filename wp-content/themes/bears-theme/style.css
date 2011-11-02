@@ -473,6 +473,9 @@ article.feature-image.small .entry-summary p a:hover {
 .leaguemanager .match2 {
 	color: #fff;
 }
+.leaguemanager .match2 strong {
+	font-weight: normal;
+}
 .leaguemanager a:hover {
 	text-decoration: underline;
 }
